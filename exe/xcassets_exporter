@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require "xcassets_exporter"
+require 'optparse'
+
+option={}
+OptionParser.new do |opt|
+  begin
+    opt.on('-i', '--input=SRC_PATH', 'xcassets source path') {|v| option[:input] = v}
+    opt.on('-o', '--output=DEST_PATH', 'export destination path') {|v| option[:output] = v}
+    opt.parse!(ARGV)
+    XcassetsExporter::Exporter.new.export(option[:input], option[:output])
+  rescue => e
+    puts "Error: #{e}.\nSee #{opt}"
+    exit
+  end
+end
+
