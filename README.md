@@ -51,7 +51,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-export_xcassets -i [Image.xcassets path] -o [Image directory]
+xcassets_exporter -i [Image.xcassets path] -o [Image directory]
 ```
 
 ## Contributing
