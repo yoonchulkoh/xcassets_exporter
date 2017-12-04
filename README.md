@@ -1,4 +1,4 @@
-# XcassetsExporter
+# Xcassets Exporter
 
 Export `xcassets` exclude `.imageset` directories and `Contents.json` from `Images.xcassets`.
 
